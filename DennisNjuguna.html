@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennis Wangari - Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(44, 62, 80, 0.98);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 12rem 2rem 6rem;
+            background: linear-gradient(135deg, var(--dark), #34495e);
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            margin: 2rem auto;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 6rem 2rem;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .skill-category {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .skill-item {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            background: #f8f9fa;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 6rem 2rem;
+            background: var(--dark);
+            position: relative;
+        }
+
+        .contact-floating {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Add more custom styles */
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="logo">DNW</h1>
+            <div class="nav-links">
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div data-aos="zoom-in">
+            <img src="denix.jpg" alt="Dennis" class="profile-img">
+            <h1>Dennis Njuguna Wangari</h1>
+            <p class="tagline">Full-Stack Developer | Chemistry Expert | Electrician</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skill-category" data-aos="fade-up">
+            <h2><i class="fas fa-laptop-code"></i> Web Development Expertise</h2>
+            <div class="skill-item">
+                <h3>Frontend Development</h3>
+                <p>Built 15+ responsive websites using React and Vue.js<br>
+                Example: E-commerce platform with real-time inventory management</p>
+            </div>
+            <div class="skill-item">
+                <h3>Backend Systems</h3>
+                <p>Developed REST APIs with Node.js and Django<br>
+                Example: Payment gateway integration for banking system</p>
+            </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up">
+            <h2><i class="fas fa-flask"></i> Chemistry Expertise</h2>
+            <div class="skill-item">
+                <h3>Oil Extraction</h3>
+                <p>Developed cost-effective avocado oil extraction process<br>
+                Example: 40% yield improvement using modified cold-press technique</p>
+            </div>
+            <div class="skill-item">
+                <h3>Polymer Science</h3>
+                <p>Created biodegradable packaging materials<br>
+                Example: Starch-based polymers with 6-month decomposition rate</p>
+            </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up">
+            <h2><i class="fas fa-bolt"></i> Electrical Expertise</h2>
+            <div class="skill-item">
+                <h3>Industrial Wiring</h3>
+                <p>Designed electrical systems for manufacturing plants<br>
+                Example: 25% energy reduction through optimized circuit design</p>
+            </div>
+            <div class="skill-item">
+                <h3>Automation</h3>
+                <p>Implemented smart home systems<br>
+                Example: IoT-based energy monitoring system with mobile app</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-card" data-aos="zoom-in">
+            <h2>Let's Connect!</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +254 702 722 193</p>
+                <p><i class="fas fa-envelope"></i> dennis@example.com</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating Contact Button -->
+    <div class="contact-floating" onclick="scrollToContact()">
+        <i class="fas fa-comment-dots"></i>
+        <span>Hire Me!</span>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+        
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
