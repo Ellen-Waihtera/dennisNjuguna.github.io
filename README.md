@@ -1,225 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dennis Wangari - Portfolio</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2ecc71;
-            --secondary: #3498db;
-            --dark: #2c3e50;
-            --light: #ecf0f1;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(44, 62, 80, 0.98);
-            padding: 1.5rem 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 12rem 2rem 6rem;
-            background: linear-gradient(135deg, var(--dark), #34495e);
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            border: 5px solid var(--primary);
-            margin: 2rem auto;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* Skills Section */
-        .skills {
-            padding: 6rem 2rem;
-            background: var(--light);
-            color: var(--dark);
-        }
-
-        .skill-category {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .skill-item {
-            margin: 2rem 0;
-            padding: 1.5rem;
-            border-left: 4px solid var(--primary);
-            background: #f8f9fa;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 6rem 2rem;
-            background: var(--dark);
-            position: relative;
-        }
-
-        .contact-floating {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--primary);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            cursor: pointer;
-            z-index: 1000;
-        }
-
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        /* Add more custom styles */
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dennis Njuguna | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body { scroll-behavior: smooth; }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 1s forwards; }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <h1 class="logo">DNW</h1>
-            <div class="nav-links">
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-sans">
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center min-h-screen text-center p-4">
+    <img src="denix.jpg" alt="Dennis Njuguna" class="w-40 h-40 rounded-full mb-6 border-4 border-white shadow-lg fade-up" />
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-up">Dennis Njuguna Wangari</h1>
+    <p class="text-lg md:text-2xl mb-6 max-w-2xl fade-up" style="animation-delay: 0.5s; animation-fill-mode: forwards;">
+      Biochemist | Veterinary Enthusiast | Web Developer | Electrical Installer
+    </p>
+    <a href="#projects" class="px-6 py-3 text-lg bg-white text-black rounded-2xl shadow-xl transform hover:scale-105 transition">Explore My Work</a>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div data-aos="zoom-in">
-            <img src="denix.jpg" alt="Dennis" class="profile-img">
-            <h1>Dennis Njuguna Wangari</h1>
-            <p class="tagline">Full-Stack Developer | Chemistry Expert | Electrician</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="skill-category" data-aos="fade-up">
-            <h2><i class="fas fa-laptop-code"></i> Web Development Expertise</h2>
-            <div class="skill-item">
-                <h3>Frontend Development</h3>
-                <p>Built 15+ responsive websites using React and Vue.js<br>
-                Example: E-commerce platform with real-time inventory management</p>
-            </div>
-            <div class="skill-item">
-                <h3>Backend Systems</h3>
-                <p>Developed REST APIs with Node.js and Django<br>
-                Example: Payment gateway integration for banking system</p>
-            </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up">
-            <h2><i class="fas fa-flask"></i> Chemistry Expertise</h2>
-            <div class="skill-item">
-                <h3>Oil Extraction</h3>
-                <p>Developed cost-effective avocado oil extraction process<br>
-                Example: 40% yield improvement using modified cold-press technique</p>
-            </div>
-            <div class="skill-item">
-                <h3>Polymer Science</h3>
-                <p>Created biodegradable packaging materials<br>
-                Example: Starch-based polymers with 6-month decomposition rate</p>
-            </div>
-        </div>
-
-        <div class="skill-category" data-aos="fade-up">
-            <h2><i class="fas fa-bolt"></i> Electrical Expertise</h2>
-            <div class="skill-item">
-                <h3>Industrial Wiring</h3>
-                <p>Designed electrical systems for manufacturing plants<br>
-                Example: 25% energy reduction through optimized circuit design</p>
-            </div>
-            <div class="skill-item">
-                <h3>Automation</h3>
-                <p>Implemented smart home systems<br>
-                Example: IoT-based energy monitoring system with mobile app</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-card" data-aos="zoom-in">
-            <h2>Let's Connect!</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> +254 702 722 193</p>
-                <p><i class="fas fa-envelope"></i> dennis@example.com</p>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea rows="5" placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Floating Contact Button -->
-    <div class="contact-floating" onclick="scrollToContact()">
-        <i class="fas fa-comment-dots"></i>
-        <span>Hire Me!</span>
+  <!-- About Section -->
+  <section class="px-6 md:px-20 py-20 bg-gray-950">
+    <div class="fade-up">
+      <h2 class="text-4xl font-bold mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed max-w-3xl">
+        I'm Dennis Njuguna Wangari, a passionate biochemist, electrical installer, and web developer from Murang'a County, Kenya. I enjoy
+        building websites, exploring biochemistry, and finding ways to add value to everyday products. I aim to use
+        science, code, and creativity to make a positive impact through practical and innovative projects.
+      </p>
     </div>
+  </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000 });
-        
-        function scrollToContact() {
-            document.getElementById('contact').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    </script>
+  <!-- Projects Section -->
+  <section id="projects" class="px-6 md:px-20 py-20 bg-black">
+    <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Oil Extraction from Fruits</h3>
+        <p>I explore various techniques like cold pressing and solvent extraction to obtain oils from fruits such as avocados. These oils are studied for their nutritional and cosmetic uses.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Organic Supplement Extraction</h3>
+        <p>I extract beneficial compounds from organic materials like moringa and herbs to create natural supplements aimed at improving health and well-being.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Web Development & Programming</h3>
+        <p>I build dynamic websites using HTML, CSS, JavaScript, and libraries like React. I also use Python for data analysis, automation, and backend development.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Electrical Installation Projects</h3>
+        <p>I have hands-on experience in wiring, installing, and troubleshooting electrical systems for homes and small businesses, ensuring safe and reliable connections.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Organic Chemistry Derivatives</h3>
+        <p>My work in organic chemistry includes synthesizing and analyzing derivatives of organic compounds, particularly focusing on plant-based materials and their transformation into value-added chemical products with medicinal or industrial applications.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">E-commerce Websites</h3>
+        <p>I design and develop responsive websites for businesses including clothing stores, food delivery services, and medicine distribution platforms. These websites are optimized for smooth user experiences and efficient online operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="px-6 md:px-20 py-20 bg-gray-950">
+    <div class="fade-up">
+      <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+      <p class="text-lg mb-2">Phone: <a href="tel:+254702722193" class="text-blue-400 hover:underline">0702 722 193</a></p>
+      <p class="text-lg mb-6">Email: <a href="mailto:njugunadennis1000@gmail.com" class="text-blue-400 hover:underline">njugunadennis1000@gmail.com</a></p>
+      <a href="mailto:njugunadennis1000@gmail.com" class="inline-block mb-6 px-6 py-3 bg-white text-black rounded-xl shadow hover:bg-gray-200 transition">
+        Email Me
+      </a>
+      <form class="flex flex-col gap-4 max-w-xl">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="p-4 rounded-xl bg-gray-800 text-white border border-gray-600"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="p-4 rounded-xl bg-gray-800 text-white border border-gray-600"
+        />
+        <textarea
+          rows="4"
+          placeholder="Your Message"
+          class="p-4 rounded-xl bg-gray-800 text-white border border-gray-600"
+        ></textarea>
+        <button type="submit" class="px-6 py-3 bg-white text-black rounded-xl shadow hover:bg-gray-200 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.fade-up').forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.2}s`;
+    });
+  </script>
 </body>
 </html>
+
