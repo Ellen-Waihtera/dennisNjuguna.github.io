@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dennis Njuguna | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body { scroll-behavior: smooth; }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 1s forwards; }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-sans">
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center min-h-screen text-center p-4">
+    <img src="denix.jpg" alt="Dennis Njuguna" class="w-40 h-40 rounded-full mb-6 border-4 border-white shadow-lg fade-up" />
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-up">Dennis Njuguna Wangari</h1>
+    <p class="text-lg md:text-2xl mb-6 max-w-2xl fade-up" style="animation-delay: 0.5s; animation-fill-mode: forwards;">
+      Biochemist | Veterinary Enthusiast | Web Developer | Electrical Installer
+    </p>
+    <a href="#projects" class="px-6 py-3 text-lg bg-white text-black rounded-2xl shadow-xl transform hover:scale-105 transition">Explore My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="px-6 md:px-20 py-20 bg-gray-950">
+    <div class="fade-up">
+      <h2 class="text-4xl font-bold mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed max-w-3xl">
+        I'm Dennis Njuguna Wangari, a passionate biochemist, electrical installer, and web developer from Murang'a County, Kenya. I enjoy
+        building websites, exploring biochemistry, and finding ways to add value to everyday products. I aim to use
+        science, code, and creativity to make a positive impact through practical and innovative projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="px-6 md:px-20 py-20 bg-black">
+    <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Oil Extraction from Fruits</h3>
+        <p>I explore various techniques like cold pressing and solvent extraction to obtain oils from fruits such as avocados. These oils are studied for their nutritional and cosmetic uses.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Organic Supplement Extraction</h3>
+        <p>I extract beneficial compounds from organic materials like moringa and herbs to create natural supplements aimed at improving health and well-being.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Web Development & Programming</h3>
+        <p>I build dynamic websites using HTML, CSS, JavaScript, and libraries like React. I also use Python for data analysis, automation, and backend development.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Electrical Installation Projects</h3>
+        <p>I have hands-on experience in wiring, installing, and troubleshooting electrical systems for homes and small businesses, ensuring safe and reliable connections.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">Organic Chemistry Derivatives</h3>
+        <p>My work in organic chemistry includes synthesizing and analyzing derivatives of organic compounds, particularly focusing on plant-based materials and their transformation into value-added chemical products with medicinal or industrial applications.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition fade-up">
+        <h3 class="text-2xl font-semibold mb-2">E-commerce Websites</h3>
+        <p>I design and develop responsive websites for businesses including clothing stores, food delivery services, and medicine distribution platforms. These websites are optimized for smooth user experiences and efficient online operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="px-6 md:px-20 py-20 bg-gray-950">
+    <div class="fade-up">
+      <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+      <p class="text-lg mb-2">Phone: <a href="tel:+254702722193" class="text-blue-400 hover:underline">0702 722 193</a></p>
+      <p class="text-lg mb-6">Email: <a href="mailto:njugunadennis1000@gmail.com" class="text-blue-400 hover:underline">njugunadennis1000@gmail.com</a></p>
+      <a href="mailto:njugunadennis1000@gmail.com" class="inline-block mb-6 px-6 py-3 bg-white text-black rounded-xl shadow hover:bg-gray-200 transition">
+        Email Me
+      </a>
+      <form class="flex flex-col gap-4 max-w-xl">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="p-4 rounded-xl bg-gray-800 text-white border border-gray-600"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="p-4 rounded-xl bg-gray-800 text-white border border-gray-600"
+        />
+        <textarea
+          rows="4"
+          placeholder="Your Message"
+          class="p-4 rounded-xl bg-gray-800 text-white border border-gray-600"
+        ></textarea>
+        <button type="submit" class="px-6 py-3 bg-white text-black rounded-xl shadow hover:bg-gray-200 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.fade-up').forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.2}s`;
+    });
+  </script>
+</body>
+</html>
+
